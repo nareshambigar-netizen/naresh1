@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-code of javaS
-=======
 function isPrime(n) {
     if (n < 2) return false;
     for (let i = 2; i <= Math.sqrt(n); i++) {
@@ -26,4 +23,4 @@ function generatePrimes() {
 
     resultDiv.textContent = primes.join(", ");
 }
->>>>>>> java
+git add .Mathgit add 
