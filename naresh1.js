@@ -1,25 +1,14 @@
-function isPrime(n) {
-    if (n < 2) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) return false;
-    }
-    return true;
-}
+document.getElementById("checkBtn").addEventListener("click", function () {
+    let num = document.getElementById("number").value;
+    let resultText;
 
-function generatePrimes() {
-    const limit = document.getElementById("limit").value;
-    const resultDiv = document.getElementById("result");
-
-    if (!limit || limit < 2) {
-        resultDiv.textContent = "Please enter a number greater than 1.";
-        return;
+    if (num === "") {
+        resultText = "Please enter a number!";
+    } else if (num % 2 === 0) {
+        resultText = num + " is Even";
+    } else {
+        resultText = num + " is Odd";
     }
 
-    let primes = [];
-
-    for (let i = 2; i <= limit; i++) {
-        if (isPrime(i)) primes.push(i);
-    }
-
-    resultDiv.textContent = primes.join(", ");
-}
+    document.getElementById("result").innerText = resultText;
+});
