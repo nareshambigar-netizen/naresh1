@@ -1,26 +1,46 @@
-function isPrime(n) {
-    if (n < 2) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) return false;
-    }
-    return true;
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-function generatePrimes() {
-    const limit = document.getElementById("limit").value;
-    const resultDiv = document.getElementById("result");
-
-    if (!limit || limit < 2) {
-        resultDiv.textContent = "Please enter a number greater than 1.";
-        return;
-    }
-
-    let primes = [];
-
-    for (let i = 2; i <= limit; i++) {
-        if (isPrime(i)) primes.push(i);
-    }
-
-    resultDiv.textContent = primes.join(", ");
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
 }
-git add .Mathgit add 
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
