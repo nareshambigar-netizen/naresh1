@@ -1,14 +1,19 @@
-document.getElementById("checkBtn").addEventListener("click", function () {
-    let num = document.getElementById("number").value;
-    let resultText;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even or Odd Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    if (num === "") {
-        resultText = "Please enter a number!";
-    } else if (num % 2 === 0) {
-        resultText = num + " is Even";
-    } else {
-        resultText = num + " is Odd";
-    }
+<div class="box">
+    <h2>Even or Odd Checker</h2>
+    <input type="number" id="number" placeholder="Enter a number">
+    <button id="checkBtn">Check</button>
+    <div class="result" id="result"></div>
+</div>
 
-    document.getElementById("result").innerText = resultText;
-});
+<script src="script.js"></script>
+</body>
+</html>
